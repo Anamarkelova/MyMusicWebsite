@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Favorite Music</title>
+    <style>
+        body{
+            background-color: #f5f0ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            color: #6a3ea1;
+            font-size: 42px;
+        }
+        h2 {
+            color: #333333;
+        }
+        p {
+            font-size: 18px;
+        }
+        iframe {
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>My Favorite Music</h1>
+    <p>Welcome to my music website!</p>
+    <h2>Modjo - Lady (Hear Me Tonight)</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mMfxI3r_LyA?si=OMc4_4v_bER0MAN1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <script>
+        let title = document.querySelector("h1");
+        let size = 42;
+        let growing = true;
+
+        setInterval(function () {
+            if (growing) {
+                size++;
+                if (size >= 50) {
+                    growing = false;
+                }
+            } else {
+                size--;
+                if (size <= 42) {
+                    growing = true;
+                }
+            }
+            title.style.fontSize = size + "px";
+        }, 100);
+    </script>
+</body>
+</html>
